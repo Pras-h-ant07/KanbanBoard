@@ -149,17 +149,22 @@ deleteBtn.addEventListener("click", () => {
   } else {
     deleteBtn.style.backgroundColor = "transparent";
   }
+
   let ticketsNode = document.querySelectorAll(".ticket");
-  for (let i = 0; i < ticketsNode.length; i++) {
-    ticketsNode[i].addEventListener("click", () => {
-      allTicketsList.forEach((tkt, idx) => {
-        if (deleteBtnStatus && i == idx) {
-          allTicketsList.splice(i, 1);
-          localStorage.setItem("AllTickets", JSON.stringify(allTicketsList));
-          ticketsNode[i].remove();
-        }
-      });
-    });
+  ticketsNode.forEach((ticket, index) => {
+    ticket.removeEventListener("click", handleTicketClick);
+    ticket.addEventListener("click", handleTicketClick);
+  });
+
+  function handleTicketClick() {
+    if (deleteBtnStatus) {
+      const ticketIndex = Array.from(ticketsNode).indexOf(this);
+      if (ticketIndex !== -1) {
+        allTicketsList.splice(ticketIndex, 1);
+        this.remove();
+        localStorage.setItem("AllTickets", JSON.stringify(allTicketsList));
+      }
+    }
   }
 });
 
