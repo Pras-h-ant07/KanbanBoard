@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="sytle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="optionBar">
+        <!-- Option Bar -->
+        <div class="colorPallet">
+          <!-- Color Pallet Bar -->
+          <div class="colorbox colorBox1"></div>
+          <div class="colorbox colorBox2"></div>
+          <div class="colorbox colorBox3"></div>
+          <div class="colorbox colorBox4"></div>
+        </div>
+        <div class="appName">
+          <h1>&nbsp KANBAN BOARD &nbsp</h1>
+        </div>
+        <div class="actionBox">
+          <!-- Action box -->
+          <div id="addBtn">
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="remove-btn">
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+        </div>
+      </div>
+      <div class="note"><p>Note: Use "double click" to cancel the filters</p></div>
+      <div class="ticket-container">
+        <!-- Ticket container -->
+      </div>
+
+      <div class="new-ticket-box">
+        <!-- add a new ticket container -->
+        <textarea
+          class="text-area"
+          placeholder="Select the Color, Enter the task and Press R-SHIFT."
+        ></textarea>
+        <div class="button-panel">
+          <div class="panel-btn colorBox1 select"></div>
+          <div class="panel-btn colorBox2"></div>
+          <div class="panel-btn colorBox3"></div>
+          <div class="panel-btn colorBox4"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/24873b5863.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="script.js"></script>
+</html>
