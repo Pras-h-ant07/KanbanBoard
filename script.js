@@ -47,7 +47,7 @@ newTaskPanelColorsList.forEach((colorBtn) => {
 
 // to add the written text as a ticket
 newTaskContainer.addEventListener("keydown", (e) => {
-  if (e.code == "ShiftRight" && newTaskTextArea.value) {
+  if (e.key == "Enter" && newTaskTextArea.value) {
     let tktId = generateId();
     const newTask = "&rarr; " + newTaskTextArea.value
     generateTicket(selectedColor, tktId, newTask);
