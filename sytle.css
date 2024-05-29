@@ -121,8 +121,8 @@ body {
     height: 150vh;
    background-color: #ccc5b9;
     display:flex;
+    justify-content:space-around;
     flex-wrap: wrap;
-    justify-content:space-evenly;
 }
 
 
